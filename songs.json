@@ -1,50 +1,52 @@
-[
-    {
-        "title" : "In the Air Tonight",
-        "artist" : "Phil Collins",
-        "release_year" : 1981,
-        "genres" : ["Experimental pop", "Electronic rock"]
-    },
-    {
-        "title" : "Good Luck, Babe!",
-        "artist" : "Chappell Roan",
-        "release_year" : 2024,
-        "genres" : ["Synth-pop"]
-    },
-    {
-        "title" : "Wuthering Heights",
-        "artist" : "Kate Bush",
-        "release_year" : 1978,
-        "genres" : ["Art rock"]
-    },
-    {
-        "title" : "mangetout",
-        "artist" : "Wet Leg",
-        "release_year" : 2025,
-        "genres" : ["Alternative", "Indie"]
-    },
-    {
-        "title" : "You Make Loving Fun",
-        "artist" : "Fleetwood Mac",
-        "release_year" : 1977,
-        "genres" : ["Pop rock", "Soft rock"]
-    },
-    {
-        "title" : "House Tour",
-        "artist" : "Sabrina Carpenter",
-        "release_year" : 2025,
-        "genres" : ["Pop"]
-    },
-    {
-        "title" : "Image",
-        "artist" : "Magdalena Bay",
-        "release_year" : 2024,
-        "genres" : ["Synth-pop", "Alternative"]
-    },
-    {
-        "title" : "Coming Up",
-        "artist" : "Paul McCartney",
-        "release_year" : 1980,
-        "genres" : ["New wave", "Synth-pop"]
-    }
-]
+{   "songs" : 
+    [
+        {
+            "title" : "In the Air Tonight",
+            "artist" : "Phil Collins",
+            "release_year" : 1981,
+            "genres" : ["Experimental pop", "Electronic rock"]
+        },
+        {
+            "title" : "Good Luck, Babe!",
+            "artist" : "Chappell Roan",
+            "release_year" : 2024,
+            "genres" : ["Synth-pop"]
+        },
+        {
+            "title" : "Wuthering Heights",
+            "artist" : "Kate Bush",
+            "release_year" : 1978,
+            "genres" : ["Art rock"]
+        },
+        {
+            "title" : "mangetout",
+            "artist" : "Wet Leg",
+            "release_year" : 2025,
+            "genres" : ["Alternative", "Indie"]
+        },
+        {
+            "title" : "You Make Loving Fun",
+            "artist" : "Fleetwood Mac",
+            "release_year" : 1977,
+            "genres" : ["Pop rock", "Soft rock"]
+        },
+        {
+            "title" : "House Tour",
+            "artist" : "Sabrina Carpenter",
+            "release_year" : 2025,
+            "genres" : ["Pop"]
+        },
+        {
+            "title" : "Image",
+            "artist" : "Magdalena Bay",
+            "release_year" : 2024,
+            "genres" : ["Synth-pop", "Alternative"]
+        },
+        {
+            "title" : "Coming Up",
+            "artist" : "Paul McCartney",
+            "release_year" : 1980,
+            "genres" : ["New wave", "Synth-pop"]
+        }
+    ]
+}
