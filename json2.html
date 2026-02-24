@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON1</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<style>
+    body {margin-left: 10px;}
+</style>
+</head>
+
+<body>
+	<script language="javascript">
+        $.get( "https://ljoyg.github.io/cs120-json/songs.json", 
+			window.onload = function( data ) {
+				console.log('raw data\n'+ data)
+				str = JSON.stringify(data);		//data is a json object
+				document.getElementById('display').innerHTML = str;
+				console.log('string data\n'+ str)
+
+                parsedData = JSON.parse(str);
+
+				str = "";
+				parsedData.songs.forEach(song => { 
+				str += "<strong>" 
+					+ song.title + "</strong><br/>" 
+                    + "Artist: " + song.artist + "<br/>"
+                    + "Genre: " + song.genres.join(', ') + "<br/>"
+					+ "Released " + song.release_year + "<br/><br/>";
+				})
+                console.log(str);
+                document.getElementById("display").innerHTML = str;
+            }
+        )
+    </script>
+    <div id="display"></div>
+</body>
+</html>

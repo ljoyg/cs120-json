@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON1</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<style>
+    body {margin-left: 10px;}
+</style>
+</head>
+
+<body>
+	<script language="javascript">
+        $.get( "https://ljoyg.github.io/cs120-json/songs.json", 
+			window.onload = function( data ) {
+				console.log('raw data\n'+ data);
+				str = JSON.stringify(data);
+				console.log('string data\n'+ str);
+
+                parsedData = JSON.parse(str);
+
+				genres = [];
+				parsedData.songs.forEach(song => { 
+				    genres.push(song.genres);
+				})
+
+                flatGenres = genres.flat();
+                allGenres = [];
+                flatGenres.forEach(genre => {
+                    if (!allGenres.includes(genre)) {
+                        allGenres.push(genre);
+                    }
+                })
+
+                genreOptions = ""
+                allGenres.forEach(genre => {
+                    genreOptions += "<option id='" + genre.toLowerCase().replace(' ', '-') + "'>" + genre + "</option>";
+                })
+                document.getElementById("genreFilter").innerHTML = genreOptions;
+
+                document.getElementById("filterButton").onclick = filterSongs;
+
+                function filterSongs() {
+                    i = genreFilter.selectedIndex
+                    genreText = genreFilter.options[i].text;
+                    showSongs = []
+                    parsedData.songs.forEach(song => {
+                        if (song.genres.includes(genreText)) {
+                            showSongs.push(song.title);
+                        }
+                    })
+                    document.getElementById("songList").innerHTML = showSongs.join(', ');
+                }
+            },
+        )
+    </script>
+    <div id="display">
+        <select id="genreFilter"></select>
+        <button id="filterButton">Filter</button>
+        <div id="songList"></div>
+    </div>
+</body>
+</html>
