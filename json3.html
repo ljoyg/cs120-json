@@ -24,17 +24,20 @@
 				})
 
                 flatGenres = genres.flat();
+				console.log('flat genres: ' + flatGenres)
                 allGenres = [];
                 flatGenres.forEach(genre => {
                     if (!allGenres.includes(genre)) {
                         allGenres.push(genre);
                     }
                 })
+				console.log('all genres: ' + allGenres)
 
                 genreOptions = ""
                 allGenres.forEach(genre => {
                     genreOptions += "<option id='" + genre.toLowerCase().replace(' ', '-') + "'>" + genre + "</option>";
                 })
+				console.log('genre options: ' + genreOptions)
                 document.getElementById("genreFilter").innerHTML = genreOptions;
 
                 document.getElementById("filterButton").onclick = filterSongs;
