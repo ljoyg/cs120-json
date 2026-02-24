@@ -13,11 +13,10 @@
 	<script language="javascript">
         $.get( "https://raw.githubusercontent.com/ljoyg/cs120-json/refs/heads/main/songs.json", 
 			window.onload = function( data ) {
-				console.log('raw data\n'+ data);
 				str = JSON.stringify(data);
-				console.log('string data\n'+ str);
 
                 parsedData = JSON.parse(str);
+                console.log(parsedData);
 
 				genres = [];
 				parsedData.songs.forEach(song => { 
@@ -41,9 +40,9 @@
                 document.getElementById("filterButton").onclick = filterSongs;
 
                 function filterSongs() {
-                    i = genreFilter.selectedIndex
+                    i = genreFilter.selectedIndex;
                     genreText = genreFilter.options[i].text;
-                    showSongs = []
+                    showSongs = [];
                     parsedData.songs.forEach(song => {
                         if (song.genres.includes(genreText)) {
                             showSongs.push(song.title);
