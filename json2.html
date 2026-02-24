@@ -11,7 +11,7 @@
 
 <body>
 	<script language="javascript">
-        $.get( "https://raw.githubusercontent.com/ljoyg/cs120-json/refs/heads/main/songs.json", 
+        $.get( "https://api.github.com/repos/ljoyg/cs120-json/refs/heads/main/songs.json", 
 			window.onload = function( data ) {
 				str = JSON.stringify(data);
 
